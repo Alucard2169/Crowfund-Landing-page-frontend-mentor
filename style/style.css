@@ -9,6 +9,12 @@
   font-family: 'Commissioner', sans-serif;
 }
 
+input {
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
+}
+
 .hide {
   display: none;
 }
@@ -122,6 +128,14 @@ header .mobile-menu-cont ul .none {
 .mainHeadings {
   color: black;
   font-size: 1.3rem;
+}
+
+.label-disabled {
+  background-color: #767575 !important;
+}
+
+.btnSelect {
+  background-color: #3cb4ac;
 }
 
 main {
@@ -330,16 +344,17 @@ main {
 }
 
 .back-project {
-  border: 1px red solid;
+  border: 1px #F0ECEB solid;
   width: 85%;
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 15%;
+  inset: auto 0;
+  top: 20%;
   background: white;
   border-radius: 10px;
   margin: 0 auto 0;
   padding: 2rem 1rem;
+  -webkit-box-shadow: 0 0 40px black;
+          box-shadow: 0 0 40px black;
 }
 
 .back-project .upper {
@@ -383,7 +398,7 @@ main {
 }
 
 .back-project .pledge {
-  border: 1px red solid;
+  border: 1px #D9D9D9 solid;
   border-radius: 10px;
   padding: 2rem 1.4rem;
 }
@@ -400,9 +415,20 @@ main {
 
 .back-project .pledge .up .sel {
   width: 1.5rem;
+  border: 1px solid #7a7a7a;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   height: 1.5rem;
-  border: 1px red solid;
   border-radius: 100px;
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+}
+
+.back-project .pledge .up .sel:checked {
+  background-color: #3cb4ac;
+  -webkit-box-shadow: inset 0 0 0 3px white;
+          box-shadow: inset 0 0 0 3px white;
 }
 
 .back-project .pledge .up h3 {
@@ -413,6 +439,10 @@ main {
   margin-top: 2rem;
   font-size: .9rem;
   line-height: 25px;
+}
+
+.back-project .pledgeSelect {
+  border: 2px #3cb4ac solid;
 }
 
 .back-project .specialPledge {
@@ -440,13 +470,11 @@ main {
 }
 
 .back-project .specialPledge .lower {
-  border-top: 1px black solid;
+  border-top: 1px #EEEEEE solid;
   width: 120%;
   margin-left: -1.45rem;
   padding: 2rem 1rem 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -454,6 +482,12 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.back-project .specialPledge .lower p {
+  color: #7a7a7a;
 }
 
 .back-project .specialPledge .lower .input {
@@ -470,10 +504,16 @@ main {
 .back-project .specialPledge .lower .input input {
   width: 6.5rem;
   border-radius: 50px;
-  border: 1px red solid;
+  border: 1px #D9D9D9 solid;
+  text-align: right;
+  font-size: 1.4rem;
+  color: #3cb4ac;
+  font-weight: 500;
+  padding: 10px;
 }
 
-.back-project .specialPledge .lower .input label {
+.back-project .specialPledge .lower .input button {
+  border: none;
   padding: 1rem 2rem;
   background-color: #3cb4ac;
   color: white;
@@ -481,10 +521,18 @@ main {
   font-weight: 700;
 }
 
-.back-project .specialPledge .lower .error {
-  margin-top: 1rem;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  color: red;
+.back-project .disabled {
+  position: relative;
+}
+
+.back-project .disabled::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: .6;
+  top: 0;
+  left: 0;
 }
 /*# sourceMappingURL=style.css.map */

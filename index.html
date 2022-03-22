@@ -121,20 +121,25 @@
         <p class="info neutral">
             Want to support us in bringing Mastercraft bamboo Monitor Riser out in the world?
         </p>
+
         <div class="selCards">
-            <div class="pledge">
+
+
+            <div class="pledge free">
                 <div class="up">
-                    <div class="sel"></div>
+                <input type="radio" class="sel" name="free">
                     <h3>Pledge with no reward</h3>
                 </div>
                 <p class="arti neutral">Choose to support us without a reward if you simply believe in our project. As backer, you
                     will be signed up ro receive product updates via email.</p>
             </div>
-            <div class="specialPledge pledge">
+
+
+            <div class="specialPledge bamboos pledge">
                 <div class="up">
-                    <div class="sel"></div>
+                        <input type="radio" class="sel" name="bamboo">
                     <div class="hed">
-                        <h3>Pledge with no reward</h3>
+                        <h3>Bamboo Stand</h3>
                         <p>Pledge $25 or more</p>
                     </div>
                 </div>
@@ -142,18 +147,20 @@
                     campaign, and you'll be added to a special Backer member list.</p>
                 <p class="left">101<span>left</span></p>
                 <div class="lower">
-                    <p>Enter your Pledge</p>
+                    <p id="error">Enter your Pledge</p>
                     <div class="input">
-                        <input type="number" id="money" min="25">
-                        <label for="money">Continue</label>
+                        <input type="number" id="money" class="bambooPledge" min="25" placeholder="$25">
+                        <button class="bambooLabel">Continue</button>
                     </div>
-                    <p class="error">error</p>
+                    
                 </div>
             </div>
 
-            <div class="specialPledge pledge">
+            <div class="specialPledge black pledge">
                 <div class="up">
-                    <div class="sel"></div>
+                
+                    <input type="radio" class="sel" name="black">
+                
                     <div class="hed">
                         <h3>Black Edition Stand</h3>
                         <p>Pledge $75 or more
@@ -164,18 +171,18 @@
                     our Backer member list. Shipping is included.</p>
                 <p class="left">64<span>left</span></p>
                 <div class="lower">
-                    <p>Enter your Pledge</p>
+                    <p id="error">Enter your Pledge</p>
                     <div class="input">
-                        <input type="number" id="money" min="75">
-                        <label for="money">Continue</label>
+                        <input type="number" id="money" min="75" class="blackPledge" placeholder="$75">
+                        <button class="blackLabel">Continue</button>
                     </div>
-                    <p class="error">error</p>
+                    
                 </div>
             </div>
 
-            <div class="specialPledge pledge">
+            <div class="specialPledge disabled pledge">
                 <div class="up">
-                    <div class="sel"></div>
+                    <input type="radio" class="sel" name="nohogany" disabled>
                     <div class="hed">
                         <h3>Nahogany Special Edition</h3>
                         <p>Pledge $200 or more
@@ -185,19 +192,16 @@
                 <p class="arti neutral">You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you.
                     You'll be added to our Backer member list. Shipping is included.</p>
                 <p class="left">0<span>left</span></p>
-                <div class="lower">
-                    <p>Enter your Pledge</p>
-                    <div class="input">
-                        <input type="number" id="money" min="75">
-                        <label for="money">Continue</label>
-                    </div>
-                    <p class="error">error</p>
                 </div>
             </div>
         </div>
 
 
     </div>
+
+    <aside class="thanks">
+
+    </aside>
 
 </body>
 

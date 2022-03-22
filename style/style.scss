@@ -9,6 +9,10 @@
     font-family: 'Commissioner', sans-serif;
 }
 
+input {
+    appearance: textfield;
+}
+
 .hide {
     display: none;
 }
@@ -112,6 +116,13 @@ header {
     font-size: 1.3rem;
 }
 
+.label-disabled {
+    background-color: #767575 !important;
+}
+
+.btnSelect {
+    background-color: hsl(176, 50%, 47%);
+}
 
 main {
     border: 1px transparent solid;
@@ -325,16 +336,16 @@ main {
 }
 
 .back-project {
-    border: 1px red solid;
+    border: 1px #F0ECEB solid;
     width: 85%;
     position: absolute;
-    left: 0;
-    right: 0;
-    top: 15%;
+    inset: auto 0;
+    top: 20%;
     background: white;
     border-radius: 10px;
     margin: 0 auto 0;
     padding: 2rem 1rem;
+    box-shadow: 0 0 40px black;
 
     .upper {
         display: flex;
@@ -369,7 +380,7 @@ main {
 
 
     .pledge {
-        border: 1px red solid;
+        border: 1px #D9D9D9 solid;
         border-radius: 10px;
         padding: 2rem 1.4rem;
 
@@ -380,9 +391,16 @@ main {
 
             .sel {
                 width: 1.5rem;
+                border: 1px solid #7a7a7a;
+                appearance: none;
                 height: 1.5rem;
-                border: 1px red solid;
                 border-radius: 100px;
+                transition-duration: 400ms;
+            }
+
+            .sel:checked {
+                background-color: #3cb4ac;
+                box-shadow: inset 0 0 0 3px white;
             }
 
             h3 {
@@ -396,6 +414,10 @@ main {
             line-height: 25px;
         }
 
+    }
+
+    .pledgeSelect {
+        border: 2px hsl(176, 50%, 47%) solid;
     }
 
     .specialPledge {
@@ -425,13 +447,18 @@ main {
         }
 
         .lower {
-            border-top: 1px black solid;
+            border-top: 1px #EEEEEE solid;
             width: 120%;
             margin-left: -1.45rem;
             padding: 2rem 1rem 0;
-            display: flex;
+            display: none;
             flex-direction: column;
             align-items: center;
+            transition: all 300ms;
+
+            p {
+                color: hsl(0, 0%, 48%);
+            }
 
             .input {
                 display: flex;
@@ -443,24 +470,42 @@ main {
                 input {
                     width: 6.5rem;
                     border-radius: 50px;
-                    border: 1px red solid;
+                    border: 1px #D9D9D9 solid;
+                    text-align: right;
+                    font-size: 1.4rem;
+                    color: hsl(176, 50%, 47%);
+                    font-weight: 500;
+                    padding: 10px;
                 }
 
-                label {
+                button {
+                    border: none;
                     padding: 1rem 2rem;
                     background-color: hsl(176, 50%, 47%);
                     color: white;
                     border-radius: 50px;
                     font-weight: 700;
                 }
-            }
 
-            .error {
-                margin-top: 1rem;
-                align-self: flex-start;
-                color: red;
-            }
 
+            }
         }
     }
+
+    .disabled {
+        position: relative;
+    }
+
+    .disabled::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        opacity: .6;
+        top: 0;
+        left: 0;
+    }
+
+
 }
