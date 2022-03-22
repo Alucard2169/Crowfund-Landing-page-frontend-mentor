@@ -72,7 +72,31 @@ header .mobile-menu-cont ul li {
 
 header .mobile-menu-cont ul li a {
   color: black;
+  position: relative;
   font-weight: 500;
+}
+
+header .mobile-menu-cont ul li a::after {
+  content: '';
+  width: 100%;
+  bottom: -5px;
+  left: 0;
+  position: absolute;
+  height: .1rem;
+  background-color: #000;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+}
+
+header .mobile-menu-cont ul li a:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: center;
+          transform-origin: center;
 }
 
 header .mobile-menu-cont ul .none {
@@ -171,6 +195,7 @@ main {
 .innerCard {
   width: 100%;
   padding: 1.5rem;
+  border: 1px #D8D8D8 solid;
 }
 
 .innerCard .prod {
@@ -246,7 +271,7 @@ main {
 }
 
 .statics p {
-  border-bottom: 1px red solid;
+  border-bottom: 1px #D7D7D7 solid;
   margin: 0 5rem 1rem;
   padding-bottom: 1rem;
 }
@@ -257,7 +282,7 @@ main {
 
 .statics .progress-bar {
   width: 100%;
-  background-color: gray;
+  background-color: #e4e4e4;
   height: .8rem;
   border-radius: 50px;
 }
@@ -282,5 +307,184 @@ main {
 
 .about-project .about-para2 {
   margin-top: 2rem;
+}
+
+.mahogany {
+  position: relative;
+}
+
+.mahogany aside button {
+  background-color: #767575;
+}
+
+.mahogany::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: white;
+  opacity: .6;
+}
+
+.back-project {
+  border: 1px red solid;
+  width: 85%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 15%;
+  background: white;
+  border-radius: 10px;
+  margin: 0 auto 0;
+  padding: 2rem 1rem;
+}
+
+.back-project .upper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.back-project .upper .back-heading {
+  font-size: 1.3rem;
+}
+
+.back-project .upper input {
+  display: none;
+}
+
+.back-project .upper label img {
+  width: 1.2rem;
+}
+
+.back-project .info {
+  margin: 2rem auto;
+  font-size: .9rem;
+}
+
+.back-project .selCards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.back-project .pledge {
+  border: 1px red solid;
+  border-radius: 10px;
+  padding: 2rem 1.4rem;
+}
+
+.back-project .pledge .up {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.back-project .pledge .up .sel {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px red solid;
+  border-radius: 100px;
+}
+
+.back-project .pledge .up h3 {
+  font-size: 1rem;
+}
+
+.back-project .pledge .arti {
+  margin-top: 2rem;
+  font-size: .9rem;
+  line-height: 25px;
+}
+
+.back-project .specialPledge {
+  overflow: hidden;
+}
+
+.back-project .specialPledge .hed p {
+  margin-top: .7rem;
+  color: #3cb4ac;
+}
+
+.back-project .specialPledge .left {
+  margin: 2rem 0;
+  font-size: 1.5rem;
+  color: black;
+  font-weight: 700;
+}
+
+.back-project .specialPledge .left span {
+  font-size: 1.3rem;
+  margin-left: .6rem;
+  position: absolute;
+  font-weight: 300;
+  color: #7a7a7a;
+}
+
+.back-project .specialPledge .lower {
+  border-top: 1px black solid;
+  width: 120%;
+  margin-left: -1.45rem;
+  padding: 2rem 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.back-project .specialPledge .lower .input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.back-project .specialPledge .lower .input input {
+  width: 6.5rem;
+  border-radius: 50px;
+  border: 1px red solid;
+}
+
+.back-project .specialPledge .lower .input label {
+  padding: 1rem 2rem;
+  background-color: #3cb4ac;
+  color: white;
+  border-radius: 50px;
+  font-weight: 700;
+}
+
+.back-project .specialPledge .lower .error {
+  margin-top: 1rem;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  color: red;
 }
 /*# sourceMappingURL=style.css.map */

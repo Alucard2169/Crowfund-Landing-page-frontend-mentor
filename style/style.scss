@@ -60,7 +60,26 @@ header {
 
                 a {
                     color: black;
+                    position: relative;
                     font-weight: 500;
+                }
+
+                a::after {
+                    content: '';
+                    width: 100%;
+                    bottom: -5px;
+                    left: 0;
+                    position: absolute;
+                    height: .1rem;
+                    background-color: #000;
+                    transform: scaleX(0);
+                    transform-origin: center;
+                    transition: all 400ms ease;
+                }
+
+                a:hover::after {
+                    transform: scaleX(1);
+                    transform-origin: center;
                 }
             }
 
@@ -161,6 +180,8 @@ main {
     width: 100%;
     padding: 1.5rem;
 
+    border: 1px #D8D8D8 solid;
+
     .prod {
         font-size: 1rem;
     }
@@ -238,7 +259,7 @@ main {
     }
 
     p {
-        border-bottom: 1px red solid;
+        border-bottom: 1px #D7D7D7 solid;
         margin: 0 5rem 1rem;
         padding-bottom: 1rem;
     }
@@ -251,7 +272,7 @@ main {
 
     .progress-bar {
         width: 100%;
-        background-color: gray;
+        background-color: #e4e4e4;
         height: .8rem;
         border-radius: 50px;
 
@@ -278,5 +299,168 @@ main {
 
     .about-para2 {
         margin-top: 2rem;
+    }
+}
+
+.mahogany {
+    position: relative;
+
+    aside {
+        button {
+            background-color: #767575;
+        }
+    }
+}
+
+.mahogany::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: white;
+    opacity: .6;
+}
+
+.back-project {
+    border: 1px red solid;
+    width: 85%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 15%;
+    background: white;
+    border-radius: 10px;
+    margin: 0 auto 0;
+    padding: 2rem 1rem;
+
+    .upper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .back-heading {
+            font-size: 1.3rem;
+        }
+
+        input {
+            display: none;
+        }
+
+        label {
+            img {
+                width: 1.2rem;
+            }
+        }
+    }
+
+    .info {
+        margin: 2rem auto;
+        font-size: .9rem;
+    }
+
+    .selCards {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+
+    .pledge {
+        border: 1px red solid;
+        border-radius: 10px;
+        padding: 2rem 1.4rem;
+
+        .up {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+
+            .sel {
+                width: 1.5rem;
+                height: 1.5rem;
+                border: 1px red solid;
+                border-radius: 100px;
+            }
+
+            h3 {
+                font-size: 1rem;
+            }
+        }
+
+        .arti {
+            margin-top: 2rem;
+            font-size: .9rem;
+            line-height: 25px;
+        }
+
+    }
+
+    .specialPledge {
+        overflow: hidden;
+
+        .hed {
+
+            p {
+                margin-top: .7rem;
+                color: hsl(176, 50%, 47%);
+            }
+        }
+
+        .left {
+            margin: 2rem 0;
+            font-size: 1.5rem;
+            color: black;
+            font-weight: 700;
+
+            span {
+                font-size: 1.3rem;
+                margin-left: .6rem;
+                position: absolute;
+                font-weight: 300;
+                color: hsl(0, 0%, 48%);
+            }
+        }
+
+        .lower {
+            border-top: 1px black solid;
+            width: 120%;
+            margin-left: -1.45rem;
+            padding: 2rem 1rem 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .input {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                margin-top: 1.5rem;
+                ;
+
+                input {
+                    width: 6.5rem;
+                    border-radius: 50px;
+                    border: 1px red solid;
+                }
+
+                label {
+                    padding: 1rem 2rem;
+                    background-color: hsl(176, 50%, 47%);
+                    color: white;
+                    border-radius: 50px;
+                    font-weight: 700;
+                }
+            }
+
+            .error {
+                margin-top: 1rem;
+                align-self: flex-start;
+                color: red;
+            }
+
+        }
     }
 }
