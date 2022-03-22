@@ -17,11 +17,14 @@ body {
     height: 100vh;
 }
 
+
 header {
     background: url("/images/image-hero-mobile.jpg") no-repeat fixed top;
     background-size: contain;
+    background-color: white;
     box-shadow: inset 0 80px 35px -10px rgba(0, 0, 0, .5);
     min-height: 40vh;
+    z-index: 100;
 
     .nav-bar {
         padding: 2rem 1.3rem;
@@ -38,10 +41,17 @@ header {
         width: 80%;
         margin: 1rem auto;
         border-radius: 20px;
+        box-shadow: 0 10px 100px -30px #000;
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 100;
+
 
         ul {
             display: flex;
             flex-direction: column;
+
 
             li {
                 width: 100%;
@@ -63,8 +73,8 @@ header {
 
 
 .cards {
-    width: 85%;
-    margin: 0 auto 2rem;
+    width: 100%;
+    margin: 0 auto;
     background-color: white;
     text-align: center;
     border: 1px #F2F2F2 solid;
@@ -84,18 +94,26 @@ header {
 }
 
 
+main {
+    border: 1px transparent solid;
+    background-color: white;
+    position: relative;
+}
 
+.stuff {
+    z-index: 0;
+    width: 85%;
+    margin: -5rem auto 0;
+}
 
 .mastercraft {
-    position: relative;
-    margin-top: -5rem;
 
     .master-icon {
         position: absolute;
         margin: 0 auto;
         left: 0;
         right: 0;
-        top: -12%;
+        top: -4.5%;
     }
 
     .textInfo {
@@ -133,4 +151,132 @@ header {
     padding: 2rem 1rem;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    border-radius: 10px;
+    margin: 2rem auto;
+    border: 1px #F2F2F2 solid;
+}
+
+.innerCard {
+    width: 100%;
+    padding: 1.5rem;
+
+    .prod {
+        font-size: 1rem;
+    }
+
+    .offer {
+        margin-top: .4rem;
+        color: hsl(176, 50%, 47%);
+        font-size: .9rem;
+    }
+
+    article {
+        margin: 2rem 0;
+        font-size: .9rem;
+        color: hsl(0, 0%, 48%);
+    }
+
+    aside {
+        p {
+            font-size: 2rem;
+            color: black;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+
+            span {
+                font-size: 1rem;
+                margin-left: .6rem;
+                position: absolute;
+                font-weight: 300;
+                color: hsl(0, 0%, 48%);
+            }
+        }
+
+        button {
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            color: white;
+            background: hsl(176, 50%, 47%);
+            position: relative;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        button::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: cyan;
+            opacity: .5;
+            z-index: 1;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: all 600ms ease-out;
+        }
+
+        button:hover::after {
+            transform: scaleX(1);
+            cursor: pointer;
+        }
+
+    }
+
+
+
+}
+
+.statics {
+    h2 {
+        font-size: 32px;
+        margin-bottom: .5rem;
+    }
+
+    p {
+        border-bottom: 1px red solid;
+        margin: 0 5rem 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .days {
+        p {
+            border: none;
+        }
+    }
+
+    .progress-bar {
+        width: 100%;
+        background-color: gray;
+        height: .8rem;
+        border-radius: 50px;
+
+        .progress {
+            width: 76%;
+            background-color: hsl(176, 50%, 47%);
+            height: 100%;
+            border-radius: 50px;
+        }
+    }
+}
+
+.about-project {
+    .about-head {
+        font-size: 1.2rem;
+        margin-bottom: 1.2rem;
+    }
+
+    p {
+        font-size: .9rem;
+        color: hsl(0, 0%, 48%);
+        line-height: 25px;
+    }
+
+    .about-para2 {
+        margin-top: 2rem;
+    }
 }
