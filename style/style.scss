@@ -64,6 +64,8 @@ header {
 
 
 // utility 
+
+
 .card {
     width: 85%;
     margin: 0 auto;
@@ -78,6 +80,135 @@ header {
     background-color: var(--button-c);
     color: white;
     font-weight: 800;
+}
+
+
+.cards-two {
+    border: 1px #b6b6b6 solid;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+
+    .upper-section {
+        padding: 2rem 1.5rem;
+    }
+
+
+    .upper {
+        input {
+            appearance: none;
+            background-color: white;
+            border: 1px solid #7a7a7a;
+            border-radius: 50%;
+            cursor: pointer;
+            height: 25px;
+            transition-duration: .5s;
+            width: 25px;
+        }
+
+        input:checked {
+            background-color: var(--button-c);
+            box-shadow: inset 0 0 0 5px white;
+        }
+
+        input:disabled {
+            cursor: not-allowed;
+        }
+
+        display: flex;
+        align-items: center;
+
+        h3 {
+            font-size: .9rem;
+            margin-left: 1rem;
+        }
+
+        .dis {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+
+            h3 {
+                margin: 0;
+            }
+
+            margin-left: 1rem;
+
+            span {
+                font-size: .85rem;
+                color: var(--button-c);
+                font-weight: 500;
+            }
+        }
+    }
+
+    .details {
+        margin: 1rem 0 0;
+    }
+
+    .pri {
+        margin-top: 1.5rem;
+        font-size: 1.5rem;
+        color: var(--head-c);
+        font-weight: 900;
+        position: relative;
+
+        span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--para-c);
+            position: absolute;
+            margin-left: .5rem
+        }
+    }
+
+    aside {
+        border-top: 1px #7a7a7a solid;
+        display: none;
+        width: 100%;
+        text-align: center;
+        padding: 1.3rem 0;
+
+        .error {
+            font-size: 1rem;
+        }
+
+        .inter {
+            padding: 1rem .8rem 0;
+            gap: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            input {
+                border: 1px #a9a9a9 solid;
+                position: relative;
+                width: 100%;
+                border-radius: 100px;
+                padding: 1rem;
+                appearance: textfield;
+                text-align: right;
+                font-size: 1.1rem;
+            }
+
+            label {
+                width: 50%;
+            }
+
+            button {
+                width: 50%;
+                padding: 1rem;
+                border-radius: 100px;
+                border: none;
+                background-color: var(--button-c);
+                font-size: 1rem;
+                font-weight: 500;
+                color: var(--card-c);
+            }
+        }
+
+    }
+
 }
 
 .inner-stats {
@@ -262,4 +393,33 @@ main {
 
     }
 
+}
+
+.back-page {
+
+    box-shadow: 0 0 100px 10px black;
+    z-index: 200;
+    position: relative;
+    background-color: white;
+    padding: 2rem 1.5rem;
+
+    .back-upper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.1rem;
+
+        input {
+            display: none;
+        }
+
+        label {
+            cursor: pointer;
+        }
+    }
+
+    .inner {
+        margin: 1.5rem 0;
+
+    }
 }

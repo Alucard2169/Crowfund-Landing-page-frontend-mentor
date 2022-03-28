@@ -35,7 +35,7 @@
                 <h1 class="master-heading">Mastercraft Bamboo Monitor Riser</h1>
                 <p class="about">A beautifully handcrafted monitor stand to reduce neck and eye strain.</p>
                 <div class="interactive">
-                    <button class="back-project buttons">Back this project</button>
+                    <button class="back-project buttons" value="back-open">Back this project</button>
                     <label for="bookmark">
                         <input type="checkbox" name="book" id="bookmark"><img class="book-icon" src="images/icon-bookmark.svg">
                     </label>
@@ -96,7 +96,7 @@
 
                     <aside>
                         <p class="num">101<span>left</span></p>
-                        <button class="select buttons">Select Reward</button>
+                        <button class="select buttons" value="back-open">Select Reward</button>
                     </aside>
                 </div>
 
@@ -114,7 +114,7 @@
                 
                     <aside>
                         <p class="num">64<span>left</span></p>
-                        <button class="select buttons">Select Reward</button>
+                        <button class="select buttons" value="back-open">Select Reward</button>
                     </aside>
                 </div>
 
@@ -138,5 +138,116 @@
             </div>
         </div>
     </main>
+
+    <div class="back-page card">
+        <div class="back-upper">
+            <h3 class="back-heading">Back this project</h3>
+            <label for="close">
+                <input type="checkbox" name="close_panel" id="close" checked><img src="images/icon-close-menu2.svg" class="close-back">
+            </label>
+        </div>
+        <p class="about">
+            Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?
+        </p>
+
+        <div class="inner">
+            <div class="no-reward-card cards-two">
+                <div class="upper-section">
+                    <div class="upper">
+                        <input type="radio" value="no-reward" name="pledge" id="no-reward">
+                        <h3>Pledge with no reward</h3>
+                    </div>
+                    <p class="details">
+                        Choose to support us without a reward if you simply believe in our project. As a backer, you will be signed up to
+                        receive product updates via email.
+                    </p>
+                </div>
+            </div>
+            <div class="back-bamboo-card cards-two">
+                <div class="upper-section">
+                                    <div class="upper">
+                    <input type="radio" value='bamboo' name="pledge" id="bamboo">
+                    <div class="dis">
+                        <h3>Bamboo stand</h3>
+                        <span>Pledge $25 or more</span>
+                    </div>
+                </div>
+                    <p class="details">
+                        You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you'll be added to a special Backer member list.
+                    </p>
+                    <p class="pri">
+                        101
+                        <span>left</span>
+                    </p>
+
+                </div>
+                    <aside class="bamboo-lower">
+                        <p class="error">Enter your Pledge</p>
+                        <div class="inter">
+                            <label for="amo">
+                                <input type="number" min="25" name="amount" id="amo" class="amou">
+                            </label>
+                            <button action="submit">
+                                Continue
+                            </button>
+                        </div>
+                    </aside>
+                
+            </div>
+
+            <div class="back-black-card cards-two">
+                <div class="upper-section">
+                    <div class="upper">
+                        <input type="radio" value="black" name="pledge" id="black">
+                        <div class="dis">
+                            <h3>Black Edition Stand</h3>
+                            <span>Pledge $75 or more</span>
+                        </div>
+                    </div>
+                    <p class="details">
+                        You get a Black Special Edition computer stand and a personal thank you. You'll be added to our Backer member list.
+                        Shipping is included.
+                    </p>
+                    <p class="pri">
+                        64
+                        <span>left</span>
+                    </p>
+                </div>
+
+                    <aside class="black-lower">
+                        <p class="error">Enter your Pledge</p>
+                        <div class="inter">
+                            <label for="amo">
+                                <input type="number" min="25" name="amount"id="amo" class="amou">
+                            </label>
+                            <button action="submit">
+                                Continue
+                            </button>
+                        </div>
+                    </aside>
+                
+            </div>
+
+            <div class="back-mahogany-card cards-two">
+                <div class="upper-section">
+                    <div class="upper">
+                        <input type="radio" name="pledge" id="mahogany" disabled>
+                        <div class="dis">
+                            <h3>Mahogany</h3>
+                            <span>Pledge $200 or more</span>
+                        </div>
+                    </div>
+                    <p class="details">
+                        You get two Special Edition Mahogany stands, a Backer T-shirt, and a personal thank you. You'll be added to our
+                        Backer member list. Shipping is included.
+                    </p>
+                    <p class="pri">
+                        0
+                        <span>left</span>
+                    </p>
+                </div>
+            </div>
+         </div>
+    </div>
 </body>
 </html>
