@@ -68,3 +68,42 @@ openBackPanel.forEach((button) => {
         menuBtn.disabled = true;
     })
 })
+
+
+// pledge input
+let value = 0;
+const bambooPledge = document.querySelector('#amo-bamboo');
+const blackPledge = document.querySelector('#amo-black');
+bambooPledge.value = '';
+blackPledge.value = '';
+const error2 = document.querySelector('.error2')
+const error = document.querySelector('.error');
+
+
+
+// listen for bamboo pledge input
+bambooPledge.addEventListener('input', () => {
+    value = +bambooPledge.value;
+    if (value < 25) {
+        error.style.color = 'red';
+        error.textContent = "can't be less than  $25"
+    }
+    else {
+        error.style.color = "hsl(0,0%,48%)"
+        error.textContent = "Enter your Pledge";
+    }
+})
+
+
+// listen for black pledge input
+blackPledge.addEventListener('input', () => {
+    value = +blackPledge.value;
+    if (value < 75) {
+        error2.style.color = 'red';
+        error2.textContent = "can't be less than $75"
+    }
+    else {
+        error2.style.color = "hsl(0,0%,48%)"
+        error2.textContent = "Enter your Pledge";
+    }
+})
