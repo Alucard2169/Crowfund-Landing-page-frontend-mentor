@@ -471,7 +471,6 @@ main {
 }
 
 .aside-card {
-    margin: 50% auto;
     box-shadow: 0 0 100px black;
     position: relative;
     z-index: 400;
@@ -494,6 +493,7 @@ main {
     header {
         background: url('../images/image-hero-desktop.jpg') no-repeat top fixed;
         min-height: 45vh;
+        background-size: contain;
 
         .nav-bar {
             padding: 4rem 10rem;
