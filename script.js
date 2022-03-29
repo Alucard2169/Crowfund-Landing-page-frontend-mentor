@@ -23,12 +23,13 @@ menuBtn.addEventListener('change', (e) => {
 const backClose = document.querySelector("#close");
 const backPanel = document.querySelector('.back-page');
 backPanel.classList.add('display');
-
+backClose.checked = false;
 
 backClose.addEventListener('change', (e) => {
     if (e.target.checked) {
         backPanel.classList.add('display')
         menuBtn.disabled = false;
+        backClose.checked = false;
     }
     else {
         backPanel.classList.remove('display')
@@ -43,6 +44,7 @@ let backBtn = document.querySelectorAll('input[name="pledge"]');
 let bambooLower = document.querySelector('.bamboo-lower');
 let blackLower = document.querySelector('.black-lower');
 
+backBtn.forEach((button) => button.checked = false)
 backBtn.forEach((button) => {
     button.addEventListener('change', () => {
         if (button.value == 'bamboo') {
@@ -112,3 +114,47 @@ blackPledge.addEventListener('input', () => {
         error2.textContent = "Enter your Pledge";
     }
 })
+
+// thanks message
+const thanks = document.querySelector('.thanks');
+thanks.classList.add('display');
+let contBtn = document.querySelectorAll('.submit');
+contBtn.forEach((button) => {
+    button.addEventListener('click', () => {
+        if (err == true) return;
+        else {
+            backPanel.classList.add('display');
+            thanks.classList.remove('display');
+        }
+    })
+})
+
+// thanks , got it button
+const gotIt = document.querySelector('.got');
+gotIt.addEventListener('click', () => {
+    thanks.classList.add('display');
+    backBtn.forEach((button) => button.checked = false)
+})
+
+// no reward pledge functionality 
+const selBtn = document.querySelector('input[value="no-reward"]');
+selBtn.addEventListener('change', () => {
+    if (selBtn.checked) {
+        thanks.classList.remove('display');
+        backPanel.classList.add('display');
+    }
+})
+
+// bookmark button
+const bookMark = document.querySelector('#bookmark');
+bookMark.checked = false;
+const bookIcon = document.querySelector('.book-icon');
+bookMark.addEventListener('click', () => {
+    if (bookMark.checked) {
+        bookIcon.src = 'images/icon-bookmark-copy.svg';
+    }
+    else {
+        bookIcon.src = 'images/icon-bookmark.svg'
+    }
+})
+

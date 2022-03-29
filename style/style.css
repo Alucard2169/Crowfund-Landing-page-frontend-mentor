@@ -8,6 +8,11 @@
   font-family: 'Commissioner', sans-serif;
 }
 
+button:hover {
+  cursor: pointer;
+  background-color: var(--other-c);
+}
+
 :root {
   --button-c: hsl(176, 50%, 47%);
   --para-c: hsl(0, 0%, 48%);
@@ -44,6 +49,10 @@ header .nav-bar {
 }
 
 header .nav-bar input {
+  display: none;
+}
+
+header .desktop-menu {
   display: none;
 }
 
@@ -128,9 +137,20 @@ header .mobile-menu .items {
   cursor: not-allowed;
 }
 
-.cards-two .upper h3 {
-  font-size: .9rem;
+.cards-two .upper .no {
   margin-left: 1rem;
+}
+
+.cards-two .upper label {
+  color: var(--head-c);
+  font-weight: 900;
+  font-size: .9rem;
+  margin-left: 0;
+}
+
+.cards-two .upper label:hover {
+  cursor: pointer;
+  color: var(--button-c);
 }
 
 .cards-two .upper .dis {
@@ -352,6 +372,10 @@ main .cards .main-card .interactive input {
   display: none;
 }
 
+main .cards .main-card .interactive label {
+  cursor: pointer;
+}
+
 main .stats-card {
   margin: 1.5rem auto;
   text-align: center;
@@ -444,5 +468,111 @@ main .about-card .Mahogany-card::after {
 
 .back-page .inner {
   margin: 1.5rem 0;
+}
+
+.back-page .back-mahogany-card {
+  position: relative;
+}
+
+.back-page .back-mahogany-card::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: white;
+  opacity: .5;
+}
+
+.aside-card {
+  -webkit-box-shadow: 0 0 100px black;
+          box-shadow: 0 0 100px black;
+  position: relative;
+  z-index: 400;
+  text-align: center;
+  padding: 2rem 1.5rem;
+}
+
+.aside-card .headThanks {
+  margin: 1rem 0 1.5rem 0;
+  font-size: 1.3rem;
+}
+
+.aside-card .got {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+}
+
+@media only screen and (min-width: 1300px) {
+  header {
+    background: url("../images/image-hero-desktop.jpg") no-repeat top fixed;
+    min-height: 45vh;
+  }
+  header .nav-bar {
+    padding: 4rem 10rem;
+  }
+  header .nav-bar .desktop-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 30%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .nav-bar .desktop-menu span a {
+    color: white;
+    text-decoration: none;
+  }
+  header label {
+    display: none;
+  }
+  header .mobile-menu {
+    display: none;
+  }
+  main .cards {
+    width: 60%;
+  }
+  main .cards .main-card .master-heading {
+    font-size: 2rem;
+  }
+  main .cards .stats-card .column {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  main .cards .stats-card .column .inner-stats {
+    border: none;
+  }
+  main .cards .stats-card .column .backed {
+    border-right: 1px solid #7a7a7a;
+    border-left: 1px solid #7a7a7a;
+  }
+  main .cards .about-card .inner-cards .up {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .cards .about-card .inner-cards aside {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 /*# sourceMappingURL=style.css.map */
