@@ -72,6 +72,7 @@ openBackPanel.forEach((button) => {
 
 // pledge input
 let value = 0;
+let err = false;
 const bambooPledge = document.querySelector('#amo-bamboo');
 const blackPledge = document.querySelector('#amo-black');
 bambooPledge.value = '';
@@ -85,10 +86,12 @@ const error = document.querySelector('.error');
 bambooPledge.addEventListener('input', () => {
     value = +bambooPledge.value;
     if (value < 25) {
+        err = true;
         error.style.color = 'red';
         error.textContent = "can't be less than  $25"
     }
     else {
+        err = false;
         error.style.color = "hsl(0,0%,48%)"
         error.textContent = "Enter your Pledge";
     }
@@ -99,10 +102,12 @@ bambooPledge.addEventListener('input', () => {
 blackPledge.addEventListener('input', () => {
     value = +blackPledge.value;
     if (value < 75) {
+        err = true;
         error2.style.color = 'red';
         error2.textContent = "can't be less than $75"
     }
     else {
+        err = false;
         error2.style.color = "hsl(0,0%,48%)"
         error2.textContent = "Enter your Pledge";
     }
