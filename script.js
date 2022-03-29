@@ -134,7 +134,7 @@ blackPledge.addEventListener('input', () => {
         error2.textContent = "can't be less than $75"
         contBtn.disabled = true;
     }
-    else if (blackPledge.value = '') {
+    else if (blackPledge.value == '') {
         err = true;
         contBtn.disabled = true;
     }
