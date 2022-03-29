@@ -494,6 +494,7 @@ main {
     header {
         background: url('../images/image-hero-desktop.jpg') no-repeat top fixed;
         min-height: 45vh;
+        background-size: contain;
 
         .nav-bar {
             padding: 4rem 10rem;
