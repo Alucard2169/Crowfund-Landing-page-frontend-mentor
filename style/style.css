@@ -517,6 +517,7 @@ main .about-card .Mahogany-card::after {
   header {
     background: url("../images/image-hero-desktop.jpg") no-repeat top fixed;
     min-height: 45vh;
+    background-size: contain;
   }
   header .nav-bar {
     padding: 4rem 10rem;
