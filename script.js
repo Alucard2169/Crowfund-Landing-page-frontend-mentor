@@ -84,6 +84,25 @@ const error = document.querySelector('.error');
 
 
 
+
+
+// thanks message
+const thanks = document.querySelector('.thanks');
+thanks.classList.add('display');
+let contBtn = document.querySelectorAll('.submit');
+contBtn.disabled = true;
+contBtn.forEach((button) => {
+    button.addEventListener('click', () => {
+        if (err == true) return;
+        else {
+            backPanel.classList.add('display');
+            thanks.classList.remove('display');
+        }
+    })
+})
+
+
+
 // listen for bamboo pledge input
 bambooPledge.addEventListener('input', () => {
     value = +bambooPledge.value;
@@ -91,14 +110,17 @@ bambooPledge.addEventListener('input', () => {
         err = true;
         error.style.color = 'red';
         error.textContent = "can't be less than  $25"
+        contBtn.disabled = true;
     }
-    else if (isNaN(bambooPledge.value)) {
+    else if (bambooPledge.value.length == 0) {
         err = true;
+        contBtn.disabled = true;
     }
     else {
         err = false;
         error.style.color = "hsl(0,0%,48%)"
         error.textContent = "Enter your Pledge";
+        contBtn.disabled = false;
     }
 })
 
@@ -110,11 +132,11 @@ blackPledge.addEventListener('input', () => {
         err = true;
         error2.style.color = 'red';
         error2.textContent = "can't be less than $75"
-        contBtn.disabled = true
+        contBtn.disabled = true;
     }
-    else if (isNaN(blackPledge.value)) {
+    else if (blackPledge.value = '') {
         err = true;
-        contBtn.disabled = true
+        contBtn.disabled = true;
     }
     else {
         err = false;
@@ -124,24 +146,16 @@ blackPledge.addEventListener('input', () => {
     }
 })
 
-// thanks message
-const thanks = document.querySelector('.thanks');
-thanks.classList.add('display');
-let contBtn = document.querySelectorAll('.submit');
-contBtn.forEach((button) => {
-    button.addEventListener('click', () => {
-        if (err == true) return;
-        else {
-            backPanel.classList.add('display');
-            thanks.classList.remove('display');
-        }
-    })
-})
+
+
 
 // thanks , got it button
 const gotIt = document.querySelector('.got');
 gotIt.addEventListener('click', () => {
     thanks.classList.add('display');
+    bambooLower.style.display = 'none';
+    blackLower.style.display = 'none';
+    menuBtn.disabled = false;
     backBtn.forEach((button) => button.checked = false)
 })
 
@@ -156,14 +170,19 @@ selBtn.addEventListener('change', () => {
 
 // bookmark button
 const bookMark = document.querySelector('#bookmark');
+const text = document.querySelector('.change');
 bookMark.checked = false;
 const bookIcon = document.querySelector('.book-icon');
 bookMark.addEventListener('click', () => {
     if (bookMark.checked) {
         bookIcon.src = 'images/icon-bookmark-copy.svg';
+        text.textContent = 'Bookmarked';
+        text.style.color = "hsl(176, 72%, 28%)"
     }
     else {
         bookIcon.src = 'images/icon-bookmark.svg'
+        text.textContent = 'Bookmark';
+        text.style.color = "hsl(0, 0%, 48%)";
     }
 })
 

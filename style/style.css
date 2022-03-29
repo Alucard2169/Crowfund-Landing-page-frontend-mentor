@@ -380,6 +380,10 @@ main .cards .main-card .interactive label {
   cursor: pointer;
 }
 
+main .cards .main-card .interactive label span {
+  display: none;
+}
+
 main .stats-card {
   margin: 1.5rem auto;
   text-align: center;
@@ -490,6 +494,7 @@ main .about-card .Mahogany-card::after {
 }
 
 .aside-card {
+  margin: 50% auto;
   -webkit-box-shadow: 0 0 100px black;
           box-shadow: 0 0 100px black;
   position: relative;
@@ -543,6 +548,23 @@ main .about-card .Mahogany-card::after {
   }
   main .cards .main-card .master-heading {
     font-size: 2rem;
+  }
+  main .cards .main-card .interactive label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 1rem;
+    border-radius: 50px;
+    background-color: lightgray;
+  }
+  main .cards .main-card .interactive label span {
+    display: inline;
+    margin-right: 1rem;
+    color: var(--para-c);
+    font-weight: 900;
   }
   main .cards .stats-card .column {
     display: -webkit-box;
