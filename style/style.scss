@@ -189,6 +189,7 @@ header {
         width: 100%;
         text-align: center;
         padding: 1.3rem 0;
+        flex-direction: column;
 
         .error {
             font-size: 1rem;
@@ -262,6 +263,7 @@ header {
 
     aside {
         margin-top: 1.5rem;
+
 
         .num {
             font-size: 2rem;
@@ -560,6 +562,54 @@ main {
         }
 
 
+    }
+
+    .back-page {
+        width: 60%;
+
+        .inner {
+            .upper-section {
+                position: relative;
+            }
+
+
+            .upper {
+
+                .dis {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 2rem;
+                }
+            }
+
+            .pri {
+                position: absolute;
+                top: 8px;
+                right: 60px;
+
+            }
+
+            aside {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                padding-left: 2rem;
+                padding-right: 2rem;
+
+                .error {
+                    font-size: 1.3rem;
+                }
+
+                .inter {
+                    width: 50%;
+                }
+            }
+        }
+    }
+
+    .thanks {
+        width: 40%;
+        padding: 2rem 5rem;
     }
 
 }

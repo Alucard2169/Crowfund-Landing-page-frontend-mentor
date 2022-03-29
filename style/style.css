@@ -201,6 +201,10 @@ header .mobile-menu .items {
   width: 100%;
   text-align: center;
   padding: 1.3rem 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .cards-two aside .error {
@@ -573,6 +577,51 @@ main .about-card .Mahogany-card::after {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .back-page {
+    width: 60%;
+  }
+  .back-page .inner .upper-section {
+    position: relative;
+  }
+  .back-page .inner .upper .dis {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 2rem;
+  }
+  .back-page .inner .pri {
+    position: absolute;
+    top: 8px;
+    right: 60px;
+  }
+  .back-page .inner aside {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .back-page .inner aside .error {
+    font-size: 1.3rem;
+  }
+  .back-page .inner aside .inter {
+    width: 50%;
+  }
+  .thanks {
+    width: 40%;
+    padding: 2rem 5rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

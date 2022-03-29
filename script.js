@@ -48,11 +48,11 @@ backBtn.forEach((button) => button.checked = false)
 backBtn.forEach((button) => {
     button.addEventListener('change', () => {
         if (button.value == 'bamboo') {
-            bambooLower.style.display = 'block';
+            bambooLower.style.display = 'flex';
             blackLower.style.display = 'none';
         }
         else if (button.value == 'black') {
-            blackLower.style.display = 'block';
+            blackLower.style.display = 'flex';
             bambooLower.style.display = 'none';
         }
         else {
@@ -92,6 +92,9 @@ bambooPledge.addEventListener('input', () => {
         error.style.color = 'red';
         error.textContent = "can't be less than  $25"
     }
+    else if (isNaN(bambooPledge.value)) {
+        err = true;
+    }
     else {
         err = false;
         error.style.color = "hsl(0,0%,48%)"
@@ -107,11 +110,17 @@ blackPledge.addEventListener('input', () => {
         err = true;
         error2.style.color = 'red';
         error2.textContent = "can't be less than $75"
+        contBtn.disabled = true
+    }
+    else if (isNaN(blackPledge.value)) {
+        err = true;
+        contBtn.disabled = true
     }
     else {
         err = false;
         error2.style.color = "hsl(0,0%,48%)"
         error2.textContent = "Enter your Pledge";
+        contBtn.disabled = false;
     }
 })
 
